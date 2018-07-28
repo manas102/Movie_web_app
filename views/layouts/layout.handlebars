@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>LoginApp</title>
+	<title>Movie App</title>
+  <link rel="icon" href="/images/movie_camera.png">
 	<link rel="stylesheet" href="/css/bootstrap.css" />
 	<link rel="stylesheet" href="/css/style.css" />
 </head>
@@ -11,7 +12,7 @@
         <nav>
           <ul class="nav nav-pills pull-right">
             {{#if user}}
-              <li role="presentation"><a href="/">Dashboard</a></li>
+              <li role="presentation"><a href="/">Movies</a></li>
               <li role="presentation"><a href="/users/logout">Logout</a></li>
             {{else}}
               <li role="presentation"><a href="/users/login">Login</a></li>
@@ -19,7 +20,7 @@
             {{/if}}
           </ul>
         </nav>
-        <h3 class="text-muted">LoginApp</h3>
+        <h3 class="text-muted">Movies</h3>
       </div>
 
 
@@ -44,7 +45,7 @@
       </div>
 
       <footer class="footer">
-        <p>&copy; 2015 LoginApp, Inc.</p>
+        <p>&copy; 2018 Movie  Inc.</p>
       </footer>
 
     </div> <!-- /container -->

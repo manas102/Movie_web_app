@@ -1,0 +1,78 @@
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <a href="/" class="navbar-brand ">Movies</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Genere <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <li><a href="/genere/Action">Action</a></li>
+                                    <li><a href="/genere/Adventure">Adventure</a></li>
+                                    <li><a href="/genere/Fantasy">Fantasy</a></li>
+                                </div>
+                                <div class="col-md-6">
+                                    <li><a href="/genere/Horror">Horror</a></li>
+                                    <li><a href="/genere/Thriller">Thriller</a></li>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Country <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <li><a href="/country/USA">USA</a></li>
+                                    <li><a href="/country/Korea">KOREA</a></li>
+                                    <li><a href="/country/Spain">SPAIN</a></li>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <li><a href="/country/India">INDIA</a></li>
+                                    <li><a href="/country/UK">UK</a></li>
+                                    <li><a href="/country/Japan">JAPAN</a></li>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li><a href="#">Most Watched</a> </li>
+            </div>
+
+            <div class="nav navbar-nav navbar-right">
+                <li>
+
+                    <form class="form-inline my-2 my-lg-0" id="search-box" action="/genere/<%=gnr%>" method="GET">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+
+                <li><a href="/users/logout">Logout <span class="	glyphicon glyphicon-log-in"></span></a></li>
+                <%if(user){%>
+                    <li style="margin-top: 12px;">
+                        <%=user.username%>
+                    </li>
+                    <%}%>
+
+            </div>
+        </div>
+
+    </div>
+</div>

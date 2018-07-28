@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie App</title>
+    <!--Bootstrap link-->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="icon" href="/images/movie_camera.png">
+    <style>
+        .col-md-6 li {
+            padding: 5px 0px;
+            margin-right: 15px;
+        }
+        
+        #search-box {
+            padding-top: 1em;
+        }
+    </style>
+</head>
+
+<body class="bg-info">
+
+    <% include partials/nav.ejs %>
+        <div class="container" style="margin-top: 70px;">
+            <div>
+                <p style="display: inline;">Action</p>
+                <button class="btn btn-primary" data-toggle="collapse" data-target="#list" style="margin-left: 10px;">show more</button>
+            </div>
+
+            <ul class="list-inline list-unstyled">
+                <%for(var i=0;i<Math.min(5,data.length);i++){%>
+                    <li>
+                        <a href="watch_movie/<%=data[i].Name%>"><img src="<%=data[i].Image_path%>" style="height: 200px;width:180px; padding: 10px;" alt="<%=data[i].Name%>"></a>
+                        <p class="text-center text-primary">
+                            <%=data[i].Name%>
+                        </p>
+                    </li>
+                    <%}%>
+                        <div class="collapse" id="list">
+                            <ul class="list-unstyled list-inline">
+                                <%for(var i=5;i<data.length;i++){%>
+                                    <li>
+                                        <a href="watch_movie/<%=data[i].Name%>"><img src="<%=data[i].Image_path%>" style="height: 200px;width:180px; padding: 10px;" alt="<%=data[i].Name%>"></a>
+                                        <p class="text-center text-primary">
+                                            <%=data[i].Name%>
+                                        </p>
+                                    </li>
+                                    <%}%>
+                            </ul>
+                        </div>
+            </ul>
+            <div>
+                <p style="display: inline;">Adventure</p>
+                <button class="btn btn-primary" data-toggle="collapse" data-target="#clist" style="margin-left: 10px;">show more</button>
+            </div>
+            <ul class="list-inline list-unstyled">
+
+                <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                    <p class="text-center text-primary">hello</p>
+                </li>
+                <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                    <p class="text-center text-primary">hello</p>
+                </li>
+                <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                    <p class="text-center text-primary">hello</p>
+                </li>
+                <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                    <p class="text-center text-primary">hello</p>
+                </li>
+                <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                    <p class="text-center text-primary">hello</p>
+                </li>
+                <div class="collapse" id="clist">
+                    <ul class="list-unstyled list-inline">
+                        <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                            <p class="text-center text-primary">hello</p>
+                        </li>
+                        <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                            <p class="text-center text-primary">hello</p>
+                        </li>
+                        <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                            <p class="text-center text-primary">hello</p>
+                        </li>
+                        <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                            <p class="text-center text-primary">hello</p>
+                        </li>
+                        <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                            <p class="text-center text-primary">hello</p>
+                        </li>
+                        <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                            <p class="text-center text-primary">hello</p>
+                        </li>
+                        <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                            <p class="text-center text-primary">hello</p>
+                        </li>
+                        <li><img style="height: 200px;width:180px; padding: 10px;" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+                            <p class="text-center text-primary">hello</p>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        <div style="height: 400px;">
+
+        </div>
+
+
+        <% include partials/footer.ejs %>
+
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="/js/bootstrap.js"></script>
+</body>
+
+</html>
