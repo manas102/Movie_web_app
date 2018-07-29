@@ -1,16 +1,16 @@
-# Node.js Loginapp
+# Movie WebApp
 
-This is a user login and registration app using Node.js, Express, Passport and Mongoose. It is part of the YouTube series [here](https://www.youtube.com/watch?v=Z1ktxiqyiLA)
+This is a movie WebApp app using NodeJs, Express, Mongoose and Passport.
 
 ### Version
 1.1.0
 
 ### Usage
-
+It needs to have the server video on public/videos file with same name as the database entry.
 
 ### Installation
 
-Loginapp requires [Node.js](https://nodejs.org/) v4+ to run.
+It requires nodeJs installed to run
 
 ```sh
 $ npm install
